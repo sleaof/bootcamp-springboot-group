@@ -1,4 +1,4 @@
-package br.com.digitalhouse.demo.class01.tm;
+package br.com.digitalhouse.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
