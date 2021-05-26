@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Service
 public class Conversor {
 
-    @GetMapping("/{valor}")
-    public static String numero(@PathVariable Integer valor){
+   // @GetMapping("/conversor/{valor}")
+    public static String numero( Integer valor){
         int i, miles, centenas, decenas, unidades;
         String romano = "";
 
