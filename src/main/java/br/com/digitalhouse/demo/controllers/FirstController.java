@@ -1,5 +1,6 @@
 package br.com.digitalhouse.demo.controllers;
 
+import br.com.digitalhouse.demo.services.CodigoMorse;
 import br.com.digitalhouse.demo.services.NumerosRomanos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class FirstController {
 
     @Autowired
-    NumerosRomanos service;
+    NumerosRomanos numerosRomanosService;
+    CodigoMorse codigoMorseService;
 
     @GetMapping
     public String cumprimento() {
@@ -24,8 +26,13 @@ public class FirstController {
     //    return "Ola " + nome + "!";
     //}
 
-    @GetMapping("/{numero}")
+    @GetMapping("numero/{numero}")
     public String numRomanos(@PathVariable Integer numero) {
-        return service.intToRoman(numero);
+        return numerosRomanosService.intToRoman(numero);
+    }
+
+    @GetMapping("/morse/{morse}")
+    public String convertMorse(@PathVariable String morse) {
+        return codigoMorseService.morseToPT(morse);
     }
 }
