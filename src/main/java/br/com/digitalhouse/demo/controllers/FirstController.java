@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/")
 public class FirstController {
 
-    @Autowired
+
     NumerosRomanos numerosRomanos;
 
    /* @GetMapping
@@ -16,10 +16,12 @@ public class FirstController {
         return "Olá - Controller Funcionando";
     }
     */
-    @GetMapping("/{number}")
+    @GetMapping("/numeros/{number}")
     public String transformaNumero(@PathVariable int number ){
         return numerosRomanos.converterEmRomanos(number);
     }
+
+    //@GetMapping("/codigoMorse/{}")
 
 
 
