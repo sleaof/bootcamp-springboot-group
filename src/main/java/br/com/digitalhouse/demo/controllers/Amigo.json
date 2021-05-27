@@ -1,0 +1,33 @@
+[{
+  "nome": "Jessika",
+  "idade": 23,
+  "cidade": "Cotia-SP",
+  "corFavorita": [
+    {
+      "nomeCor" : "Vermelho"
+    },
+    {
+      "nomeCor" : "Azul"
+    }
+  ],
+  "userTikTok": null,
+  "casado": false,
+  "apelido" : "Jeeh"
+},
+{
+  "nome": "Stephanie",
+  "idade": 26,
+  "cidade": "Salvador",
+  "corFavorita": [
+    {
+      "nomeCor" : "Preto"
+    },
+    {
+      "nomeCor" : "Cinza"
+    }
+  ],
+  "userTikTok": null,
+  "casado": true,
+  "apelido": "Ste"
+}
+]
