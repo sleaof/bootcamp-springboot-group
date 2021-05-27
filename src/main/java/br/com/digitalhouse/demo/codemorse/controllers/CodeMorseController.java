@@ -15,6 +15,6 @@ public class CodeMorseController {
 
     @RequestMapping("/{code}")
     public String getCode(@PathVariable String code){
-        return service.traducirMorse(code);
+        return service.translateMorse(code);
     }
 }

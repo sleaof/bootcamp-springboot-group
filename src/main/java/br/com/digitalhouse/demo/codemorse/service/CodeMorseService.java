@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CodeMorseService {
 
-    public static String traducirMorse(String mensaje){
+    public static String translateMorse(String mensaje){
 
         String letras = "abcdefghijklmnopqrstuvwxyz 0123456789.,?!()[]&:;=+-_$@";
         String codigo[] = new String[60];
