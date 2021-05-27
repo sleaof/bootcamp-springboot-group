@@ -1,5 +1,7 @@
 # bootcamp-springboot-group
 
+Projeto criado com intuito de praticar os exercicios do Bootcamp do modulo de Desenvolvimento web com Spring
+
 ## Pré-requisitos
 
 - Java 11
