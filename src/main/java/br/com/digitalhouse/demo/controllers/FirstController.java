@@ -1,5 +1,6 @@
 package br.com.digitalhouse.demo.controllers;
 
+import br.com.digitalhouse.demo.services.CalculadoraIdade;
 import br.com.digitalhouse.demo.services.CodigoMorse;
 import br.com.digitalhouse.demo.services.NumerosRomanos;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class FirstController {
     @Autowired
     NumerosRomanos numerosRomanosService;
     CodigoMorse codigoMorseService;
+    CalculadoraIdade calculadoraIdade;
 
     @GetMapping
     public String cumprimento() {
@@ -34,5 +36,10 @@ public class FirstController {
     @GetMapping("/morse/{morse}")
     public String convertMorse(@PathVariable String morse) {
         return codigoMorseService.morseToPT(morse);
+    }
+
+    @GetMapping("/idade/{dia}/{mes}/{ano}")
+    public String convertMorse(@PathVariable Integer dia, @PathVariable Integer mes, @PathVariable Integer ano) {
+        return calculadoraIdade.calcularIdade(dia, mes, ano);
     }
 }
