@@ -1,0 +1,19 @@
+
+[
+{
+  "nome": "Julia",
+  "idade": "26",
+  "cidade": "Salvador",
+  "três_cores_favoritas": ["Vinho", "Verde", "Cinza"],
+  "user do tiktok": "não tem"
+},
+{
+  "nome": "Jessika",
+  "idade": "23",
+  "cidade": "Cotia",
+  "três_cores_favoritas": ["Azul", "Preto", "Verde"],
+  "Signo": "Sagitario",
+  "Apelido" : "jeh"
+}
+]
+
