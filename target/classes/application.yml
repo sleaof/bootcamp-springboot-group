@@ -1,0 +1,8 @@
+info:
+  app:
+    name: bootcamp-springboot-group
+    description: Projeto criado com intuito de praticar os exercicios do Bootcamp do modulo de Desenvolvimento web com Spring
+    version: v0.0.1
+
+server:
+  port: 8080

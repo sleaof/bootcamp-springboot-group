@@ -12,7 +12,6 @@ import java.util.Date;
 @RestController
 public class CalculoIdadeController {
 
-    @Autowired
     CalculaIdadeService service;
 
     @GetMapping("/idade/{dia}/{mes}/{ano}")
