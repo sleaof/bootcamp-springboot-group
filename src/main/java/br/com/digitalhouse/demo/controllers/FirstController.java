@@ -1,13 +1,12 @@
 package br.com.digitalhouse.demo.controllers;
 
-import br.com.digitalhouse.demo.services.CalculadoraIdade;
-import br.com.digitalhouse.demo.services.CodigoMorse;
-import br.com.digitalhouse.demo.services.NumerosRomanos;
+import br.com.digitalhouse.demo.DTOs.AlunoDTO;
+import br.com.digitalhouse.demo.DTOs.CasaDTO;
+import br.com.digitalhouse.demo.DTOs.ResponseCasaDTO;
+import br.com.digitalhouse.demo.DTOs.ResponseDiploma;
+import br.com.digitalhouse.demo.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/")
@@ -17,16 +16,15 @@ public class FirstController {
     NumerosRomanos numerosRomanosService;
     CodigoMorse codigoMorseService;
     CalculadoraIdade calculadoraIdade;
+    @Autowired
+    CalculadoraMetrosQuadrados calculadoraMetrosQuadrados;
+    @Autowired
+    ObterDiploma obterDiploma;
 
     @GetMapping
     public String cumprimento() {
         return "Ola Mundo";
     }
-
-    //@GetMapping("/{nome}")
-    //public String cumprimento(@PathVariable String nome) {
-    //    return "Ola " + nome + "!";
-    //}
 
     @GetMapping("numero/{numero}")
     public String numRomanos(@PathVariable Integer numero) {
@@ -41,5 +39,15 @@ public class FirstController {
     @GetMapping("/idade/{dia}/{mes}/{ano}")
     public String convertMorse(@PathVariable Integer dia, @PathVariable Integer mes, @PathVariable Integer ano) {
         return calculadoraIdade.calcularIdade(dia, mes, ano);
+    }
+
+    @PostMapping("/metrosQuadrados")
+    public ResponseCasaDTO calcMetrosQuadrados(@RequestBody CasaDTO casaDTO) {
+        return calculadoraMetrosQuadrados.calcMetrosQuadrados(casaDTO);
+    }
+
+    @PostMapping("/obterDiploma")
+    public ResponseDiploma obterDiploma(@RequestBody AlunoDTO alunoDTO) {
+        return obterDiploma.obterDiploma(alunoDTO);
     }
 }
