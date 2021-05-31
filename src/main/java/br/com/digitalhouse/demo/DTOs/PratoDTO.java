@@ -6,11 +6,6 @@ public class PratoDTO {
     private String name;
     private List<Ingredientes> ingredientes;
 
-    public PratoDTO(String name, List<Ingredientes> ingredientes) {
-        this.name = name;
-        this.ingredientes = ingredientes;
-    }
-
     public String getName() {
         return name;
     }
@@ -25,5 +20,13 @@ public class PratoDTO {
 
     public void setIngredientes(List<Ingredientes> ingredientes) {
         this.ingredientes = ingredientes;
+    }
+
+    @Override
+    public String toString() {
+        return "PratoDTO{" +
+                "name='" + name + '\'' +
+                ", ingredientes=" + ingredientes +
+                '}';
     }
 }
