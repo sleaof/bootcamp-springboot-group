@@ -14,6 +14,7 @@ public class AlunoMediaController {
     public AlunoDTO alunoDaSala(@RequestBody AlunoDTO aluno){
         return aluno;
     }
+
     @PostMapping("/media")
     public String calcularMedia(@RequestBody AlunoDTO aluno){
         return CalcularAluno.calcular(aluno);

@@ -4,17 +4,14 @@ import br.com.digitalhouse.demo.DTOs.Ingredientes;
 import br.com.digitalhouse.demo.DTOs.PratoDTO;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
 @Service
-@Repository
 public class CalculateCalories {
 
     public String findCaloriesByName(String name) {
